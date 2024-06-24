@@ -1,20 +1,20 @@
 *{
-    margin: 0%;
-    padding: 0%;
-    width: auto;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 body{
-    height: 120vh;
-    width: 97vw;
-    
+   min-height: 130vh;
+   width: 100%;
     background-image: url(https://plus.unsplash.com/premium_photo-1677682897377-62909f41832f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-repeat:  no-repeat;
-    
     background-size: cover;
-    position: relative;
-    
-}
+   }
+
+   img{
+   
+   }
 
 .dropdown{
     position: relative;
@@ -53,31 +53,29 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     background-color: #ffd6c0;
     height: 10vh;
-    width: 100vw;
+    width: 100%;
 
 }
 
 nav h1 {
-    margin-top: 4vh;
+   
     color: white;
     font-size: 300%;
 }
 
 nav a {
-    margin-top: 4vh;
+ 
     color: azure;
     text-decoration: none;
 }
 
-nav .button{
-    margin-top: 2vh;
-    
-}
+
 
 .pag {
-    font-size: 250%;
+    font-size:250%;
     color: black;
     display: flex;
     flex-direction: column;
@@ -85,10 +83,17 @@ nav .button{
     margin-top: 5vh;
     
 }
+.pag h2{
+    font-size: 250%;
+    
+}
 .pag2{
     font-size: 200%;
     padding: 20px;
-
+    text-align: center;
+}
+pag2 h3{
+    text-align: center;
 }
 h3{
     font-size: 120%;
@@ -96,8 +101,22 @@ h3{
 }
 
 
-#gotocakes{
-    position: relative;
+#gotocakes .images{
+   display: flex;
+   justify-content: center;
+   margin-left: 5%;
+
+}
+img {
+    max-width: 100%;
+}
+#gotocakes img{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    
+    
 }
 .images p {
     width: 10vw;
@@ -107,13 +126,14 @@ h3{
 .images img {
     width: 20vw;
     height: 40vh;
-
-  padding-right: 40px;
-  border-radius: 20%;
-  box-shadow: -1px 0px 0px white;
+    padding-right: 0px;
+    border-radius: 20%;
+  box-shadow: 1px 0px 1px whitesmoke;
   transform: scale(var(--zoom,1));
   transform-origin: var(--x) var(--y);
   transition: transform 0.3s ease;
+   
+  
 }
 .image img:hover{
     --zoom: 3;
@@ -231,12 +251,62 @@ footer h5{
         height: 65%;
         width: 65%;
     }
+    nav {
+        height: 8vh;
+    }
+    .button{
+        padding: 4px 8px;
+        margin-right: 2px;
+    }
+    .dropdowncontent{
+        width: 100%;
+    }
+    .dropdowncontent a {
+        padding: 4px 6px;
+    }
 }
+    /*hides large texts in small screens*/
+
+   
+
+    nav h1{
+        font-size: 32px;
+    }
+    .pag h2 {
+        margin-top: 5vh;
+        font-size: 32px;
+    }
+    .pag p{
+        font-size: 24px;
+
+    }
+    #gotocakes {
+        margin-left: 10px;
+        display: flex;
+        justify-self: center;
+    }
+    #gotocakes{
+        margin-left: 10px;
+        display: flex;
+        justify-self: center;
+    }
+    #gotocakes .images{
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        gap: 1rem;
+    }
+
 
 @media only screen and (max-width:400px){
 
     .images img{
         height: 80%;
         width: 100%;
+    }
+}
+
+@media only screen and (min-width:800px){
+    .hidden-lg{
+        display: none;
     }
 }
